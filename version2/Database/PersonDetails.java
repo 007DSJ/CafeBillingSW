@@ -62,6 +62,16 @@ public class PersonDetails {
         return quantity2;
     }
 
+    public void setTotalBill(int final_cost)
+    {
+        total_bill=final_cost;   
+    }
+
+    double getTotalBill()
+    {
+        return total_bill;
+    }
+
     @Override
     public String toString()
     {
