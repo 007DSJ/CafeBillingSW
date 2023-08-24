@@ -192,6 +192,7 @@ public class Myframe extends JFrame implements ActionListener
          
          PersonDetails p=new PersonDetails(name, address,gender,meal1,q1,meal2,q2);
          details.add(p);
+         p.setTotalBill(total);
          System.out.println(p.toString());
        }
 
