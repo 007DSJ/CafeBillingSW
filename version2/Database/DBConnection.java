@@ -10,13 +10,13 @@ public class DBConnection {
         Statement statement = null;
         ResultSet resultSet = null;
 
-        String url = "jdbc:mysql://localhost:3306/";
+        String url = "jdbc:mysql://localhost:3306/cafesw?characterEncoding=utf8";
         String username = "root";
         String password = "root123";
 
         try {
             Class.forName("com.mysql.jdbc.Driver");  
-            // Connection con=DriverManager.getConnection( "jdbc:mysql://localhost:3306/Maulik","root","root"); 
+            // Connection con=DriverManager.getConnection( "jdbc:mysql://localhost:3306/dbname","root","root123"); 
             connection = DriverManager.getConnection(url, username, password);
             statement = connection.createStatement();
             statement.executeQuery("USE cafesw;");
@@ -27,7 +27,7 @@ public class DBConnection {
                 String personName = resultSet.getString("personName");
                 String address = resultSet.getString("address");
                 String gender = resultSet.getString("gender");
-                System.out.println(" personName = "+personName+"\taddress = "+address+"\tgender = "+gender);
+                System.out.println("PersonName = "+personName+"\tAddress = "+address+"\t\tGender = "+gender);
                 
             }
 
