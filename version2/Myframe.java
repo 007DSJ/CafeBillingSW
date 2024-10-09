@@ -182,18 +182,21 @@ public class Myframe extends JFrame implements ActionListener
             meal2=cb2.getSelectedItem().toString();
             q2=s1;  
            }
-
-            
+           
+           z[2] = meal1;
+           z[3] = meal2;
+           z[4] = String.valueOf(q1);
+           z[5] = String.valueOf(q2);
 
            total=noOfItem1+noOfItem2;
            System.out.println(s+" "+s1+" "+s2+" "+s3);
-           
-         new SubFrame(z,total,a);
-         
+           new SubFrame(z,total,a);
+
          PersonDetails p=new PersonDetails(name, address,gender,meal1,q1,meal2,q2);
          details.add(p);
          p.setTotalBill(total);
          System.out.println(p.toString());
+
        }
 
       //  for(PersonDetails pD:details)
